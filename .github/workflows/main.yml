@@ -48,6 +48,7 @@ jobs:
         #Uses the jtest.data.json generated with the Maven command in the previous step
         installDir: 'D:/Softwares/Parasoft/parasoft_jtest_2025.2.0_win32_x86_64/jtest'
         input: target/jtest/jtest.data.json
+        additionalParams: '-J-Duser.language=en -J-Duser.country=US'
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
