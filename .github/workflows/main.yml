@@ -57,6 +57,14 @@ jobs:
       with:
         sarif_file: reports/report.sarif # reports is a default location for reports directory
 
+    - name: Deploy Reports to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./reports
+        destination_dir: reports
+        keep_files: true
+
     # Uploads an archive that includes all report files (.xml, .html, .sarif).
     - name: Archive reports
       if: always()
@@ -64,3 +72,5 @@ jobs:
       with:
         name: Static analysis reports
         path: reports/*.*
+
+
