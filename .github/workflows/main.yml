@@ -44,6 +44,7 @@ jobs:
       uses: parasoft/run-jtest-action@2.0.2
       with:
         #Uses the jtest.data.json generated with the Maven command in the previous step
+        installDir: 'D:/Softwares/Parasoft/parasoft_jtest_2025.2.0_win32_x86_64/jtest'
         input: target/jtest/jtest.data.json
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
