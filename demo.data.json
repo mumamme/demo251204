@@ -1,0 +1,52 @@
+{
+    "schema_version": "1.6",
+    "type":       "classpath_project",
+    "name":       "com.parasoft:demo",
+    "location":    "${JSON_DIR}",
+    "compilations":    [
+        {
+            "sourcepath": [
+              {
+                "path": "${JSON_DIR}/src/main/java/",
+                "exists": true,
+                "auto_generated": false
+              }
+            ],
+			"compiler_output_path": [],
+            "classpath_entries":  [
+              {
+                "path": "${jvm_prop:java.home}/lib/jrt-fs.jar",
+                "type": "JDK",
+                "scope": {
+                  "compile": true,
+                  "runtime": true,
+                  "exported": false
+                }
+              },
+              {
+                "path": "${JSON_DIR}/lib/junit-4.13.2.jar",
+                "type": "LIBRARY",
+                "scope": {
+                  "compile": true,
+                  "runtime": true,
+                  "exported": false
+                }
+              },
+              {
+                "path": "${JSON_DIR}/lib/servlet-api-2.4.jar",
+                "type": "LIBRARY",
+                "scope": {
+                  "compile": true,
+                  "runtime": true,
+                  "exported": false
+                }
+              }
+            ],
+            "encoding":   "UTF-8",
+            "sourcelevel": "1.8"
+        }
+    ],
+    "testoutcomes": [],
+    "generated_by": "Jtest",
+    "generator_version": "1.0"
+}   
