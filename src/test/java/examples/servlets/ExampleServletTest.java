@@ -123,7 +123,7 @@ public class ExampleServletTest
 
         // When
         HttpServletRequest request = mock(HttpServletRequest.class);
-        String getParameterResult = "John"; // UTA: 配置的值
+        String getParameterResult = "John"; // UTA: ??????
         when(request.getParameter(nullable(String.class))).thenReturn(getParameterResult);
         HttpServletResponse response = mock(HttpServletResponse.class);
         PrintWriter getWriterResult = mock(PrintWriter.class);
@@ -146,7 +146,7 @@ public class ExampleServletTest
 
         // When
         HttpServletRequest request = mock(HttpServletRequest.class);
-        String getParameterResult = ""; // UTA: 配置的值
+        String getParameterResult = ""; // UTA: ??????
         when(request.getParameter(nullable(String.class))).thenReturn(getParameterResult);
         HttpServletResponse response = mock(HttpServletResponse.class);
         PrintWriter getWriterResult = mock(PrintWriter.class);

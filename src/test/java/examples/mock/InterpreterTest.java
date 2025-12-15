@@ -58,7 +58,7 @@ public class InterpreterTest
         // When
         Integer result = underTest.getNext();
 
-        // Then - 针对 方法 getNext() 的结果 的断言
+        // Then - ??? ???? getNext() ???? ?????
         assertNull(result);
 
     }

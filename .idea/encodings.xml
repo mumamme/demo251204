@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/README_zh_CN.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/test/java/examples/eval/SimpleTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/test/java/examples/mock/FileExampleTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/test/java/examples/mock/InterpreterTest.java" charset="GBK" />
   </component>
 </project>

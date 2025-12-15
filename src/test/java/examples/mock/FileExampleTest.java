@@ -73,11 +73,11 @@ public class FileExampleTest
     public void testIsOversize2() throws Throwable
     {
         // When
-        String path = "path"; // UTA: 默认值
-        long limit = 1L; // UTA: 默认值
+        String path = "path"; // UTA: ????
+        long limit = 1L; // UTA: ????
         boolean result = FileExample.isOversize(path, limit);
 
-        // Then - 针对 方法 isOversize(String, long) 的结果 的断言
+        // Then - ??? ???? isOversize(String, long) ???? ?????
         assertFalse(result);
 
     }
