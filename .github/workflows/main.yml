@@ -38,7 +38,7 @@ jobs:
     
     # Generates the jtest.data.json input file.
     - name: Run Jtest Unit Testing
-      run: mvn clean test-compile jtest:agent test jtest:jtest -D'jtest.config="builtin://Unit Tests"' 
+      run: mvn clean test-compile jtest:agent test jtest:jtest -D'jtest.config="builtin://Unit Tests" -J-Duser.language=en -J-Duser.country=US' 
 
     # Runs code analysis with Jtest
     # - name: Run Jtest
@@ -57,20 +57,20 @@ jobs:
     #   with:
     #     sarif_file: reports/report.sarif # reports is a default location for reports directory
 
-    - name: Deploy Reports to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./reports
-        destination_dir: reports
-        keep_files: true
+    # - name: Deploy Reports to GitHub Pages
+    #   uses: peaceiris/actions-gh-pages@v3
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: ./reports
+    #     destination_dir: reports
+    #     keep_files: true
 
     # Uploads an archive that includes all report files (.xml, .html, .sarif).
     - name: Archive reports
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: Static analysis reports
+        name: Unit Testing reports
         path: reports/*.*
 
 
