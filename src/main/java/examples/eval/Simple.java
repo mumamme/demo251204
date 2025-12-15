@@ -20,13 +20,14 @@ public class Simple {
      */
     public static int map(int index) {
         switch (index) {
-        case 0:
-            case10: return -1;
-        case 2:
-        case 20:
-            break;
-        default:
-            return -2;
+            case 0:
+            case 10:
+                return -1;
+            case 2:
+            case 20:
+                break;
+            default:
+                return -2;
         }
         return 0;
     }
@@ -60,9 +61,17 @@ public class Simple {
      *         will never get bored of testing.
      */
     public static boolean startsWith(String str, String match) {
-        for (int i = 0; i < match.length(); ++i)
-            if (str.charAt(i) != match.charAt(i))
+        if (str == null || match == null) {
+            return false;
+        }
+        if (str.length() < match.length()) {
+            return false;
+        }
+        for (int i = 0; i < match.length(); ++i) {
+            if (str.charAt(i) != match.charAt(i)) {
                 return false;
+            }
+        }
         return true;
     }
 }

@@ -1,9 +1,5 @@
 package examples.junit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,6 +7,11 @@ import examples.junit.IMoney;
 import examples.junit.Money;
 import examples.junit.MoneyBag;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 /**
  * MoneyTest is a JUnit 4 test class for class Money and MoneyBag and covers functionality related to requirement REQ-1
  * 
@@ -257,4 +258,5 @@ public class MoneyTest
     {
         return Money.class;
     }
+
 }
