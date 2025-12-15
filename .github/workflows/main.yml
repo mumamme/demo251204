@@ -38,7 +38,7 @@ jobs:
     
     # Generates the jtest.data.json input file.
     - name: Run Jtest Unit Testing
-      run: mvn clean test-compile jtest:agent test jtest:jtest -D'jtest.config="builtin://Unit Tests" -J-Duser.language=en -J-Duser.country=US' 
+      run: mvn clean test-compile jtest:agent test jtest:jtest -D'jtest.config="builtin://Unit Tests"' '-J-Duser.language=en -J-Duser.country=US' 
 
     # Runs code analysis with Jtest
     # - name: Run Jtest
